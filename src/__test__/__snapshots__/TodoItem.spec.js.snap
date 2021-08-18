@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div>
+  <li
+    class="c-todo-item"
+    data-item-id="1"
+  >
+    <button
+      class="c-todo-item__remove-btn"
+      data-testid="removeBtn"
+    >
+      ×
+    </button>
+    <input
+      class="c-todo-item__done-check"
+      data-testid="toggleCheck"
+      type="checkbox"
+    />
+    <span
+      class="c-todo-item__text "
+      data-testid="text"
+    >
+      test
+    </span>
+  </li>
+</div>
+`;
