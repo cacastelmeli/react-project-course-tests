@@ -1,5 +1,6 @@
 // @ts-check
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './TodoItem.scss'
 
@@ -36,7 +37,9 @@ const TodoItem = ({
   }
 
   return (
-    <li className="c-todo-item" data-item-id={item.id}>
+    <li
+      className="c-todo-item"
+      data-item-id={item.id}>
       <button
         data-testid="removeBtn"
         className="c-todo-item__remove-btn"
@@ -58,6 +61,16 @@ const TodoItem = ({
       </span>
     </li>
   )
+}
+
+TodoItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+    done: PropTypes.bool.isRequired
+  }).isRequired,
+  onItemChecked: PropTypes.func.isRequired,
+  onItemRemove: PropTypes.func.isRequired
 }
 
 export default TodoItem

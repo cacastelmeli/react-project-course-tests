@@ -1,7 +1,8 @@
 // @ts-check
 import React from 'react'
-import { apiClient } from '../../api/client'
+import PropTypes from 'prop-types'
 
+import { apiClient } from '../../api/client'
 import TodoItem from '../TodoItem/TodoItem'
 import './TodoList.scss'
 
@@ -64,6 +65,19 @@ const TodoList = ({
       ))}
     </ul>
   )
+}
+
+TodoList.propTypes = {
+  /**
+   * Items collection
+   */
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+      done: PropTypes.bool.isRequired
+    })
+  ).isRequired
 }
 
 export default TodoList
