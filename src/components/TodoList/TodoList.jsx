@@ -55,7 +55,7 @@ const TodoList = ({
   }
 
   return (
-    <ul className="c-todo-list">
+    <ul className="c-todo-list" data-testid="todoList">
       {items.map(item => (
         <TodoItem
           key={item.id}

@@ -39,7 +39,7 @@ const TodoItem = ({
   return (
     <li
       className="c-todo-item"
-      data-item-id={item.id}>
+      data-testid="todoItem">
       <button
         data-testid="removeBtn"
         className="c-todo-item__remove-btn"
@@ -55,7 +55,7 @@ const TodoItem = ({
         checked={item.done} />
 
       <span
-        data-testid="text"
+        data-testid="todoText"
         className={`c-todo-item__text ${item.done ? 'c-todo-item__text--done' : ''}`}>
         {item.text}
       </span>

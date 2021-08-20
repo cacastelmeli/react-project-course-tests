@@ -75,6 +75,7 @@ const CreateTodoForm = ({
     <form>
       <input
         type="text"
+        data-testid="todoInput"
         placeholder="To-Do text"
         onKeyDown={onInputKeyDown}
         disabled={creatingTodo}
